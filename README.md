@@ -1,6 +1,7 @@
-# Time-Travelling-File-System
+# Time-Travelling-File-System : Data Structure and Algorithms course assignment.
 This is a git-inspired version control system in which each file can have simple string based content . The system is fast with O(1) time for creation, update and other file commands while O(n + klogn) time for displaying k system wide characteristics like k recent files or biggest files. The implementation uses heaps and hashmaps.
 
+Read the attached systems for more details about the basics of the system and the assignment problem statement. Below is how to run the programme and details about IO.
 
 # How to Compile and Run
 
