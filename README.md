@@ -1,8 +1,6 @@
-# -Time-Travelling-File-System
+# Time-Travelling-File-System
 This is a git-inspired version control system in which each file can have simple string based content . The system is fast with O(1) time for creation, update and other file commands while O(n + klogn) time for displaying k system wide characteristics like k recent files or biggest files. The implementation uses heaps and hashmaps.
 
-
-------------------------------------------------------------------------------------
 
 # How to Compile and Run
 
@@ -121,4 +119,24 @@ Outputs the `min(3, total files)` most recent files of the system. `NUMBER` must
 
 ## Data Structures and Methods Implemented
 
-All primary data structures were implemented from scratch without using standard C++ containers for the
+All primary data structures were implemented from scratch without using standard C++ containers for the core structures.
+
+### filecont (HashMap)
+A custom hash map that stores all file objects, providing O(1) average-time access to any file by its name.
+
+### Hash Function
+Generates a hash from a filename string by iteratively processing the ASCII values of its characters.
+
+### file (Tree)
+Represents a single file and its entire version history. Versions are organized as a tree structure, allowing for branching.
+
+### TreeNode
+The fundamental node of the version tree. Each `TreeNode` represents a specific version of a file, storing its content, metadata, and parent/child relationships.
+
+### mapp (HashMap)
+A simple array-based map that provides O(1) access to a version (`TreeNode`) within a file by its integer `version_id` (hash function: identity).
+
+### recent_files & biggest_trees (Heaps)
+Two separate max-heap implementations used to efficiently track and retrieve system-wide file metrics.
+```
+
